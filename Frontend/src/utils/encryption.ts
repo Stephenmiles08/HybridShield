@@ -5,7 +5,7 @@ let RSA_PUBLIC_KEY: string | null = null;
 // Fetch or update the public key
 export async function getRSAPublicKey(): Promise<string> {
   if (!RSA_PUBLIC_KEY) {
-    const res = await fetch("http://localhost:3000/api/public-key");
+    const res = await fetch("https://hybridshield.onrender.com/api/public-key");
     RSA_PUBLIC_KEY = await res.text();
   }
   return RSA_PUBLIC_KEY;
