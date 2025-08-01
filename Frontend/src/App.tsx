@@ -45,7 +45,7 @@ function App() {
       setHeadersPreview(headers);
 
       // 4. Send request
-      const res = await fetch("http://localhost:3000/api/secure", {
+      const res = await fetch("https://hybridshield.onrender.com/api/secure", {
         method: "POST",
         headers,
         body: cipherBase64
