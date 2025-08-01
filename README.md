@@ -8,11 +8,11 @@ HybridShield demonstrates how to **lock down your app’s sensitive routes** so 
 
 ## **✨ Features**
 
-- 🔹 **Hybrid Encryption**: AES‑GCM for fast encryption + RSA‑OAEP for secure key exchange  
-- 🔹 **Per‑Request AES Keys**: New session key generated for each request  
-- 🔹 **Replay Protection**: Nonce + timestamp validation  
-- 🔹 **Temu‑style Security**: Mimics real‑world mobile app encryption flows  
-- 🔹 **Easy Integration**: React + Node.js example you can adapt to any app
+- **Hybrid Encryption**: AES‑GCM for fast encryption + RSA‑OAEP for secure key exchange  
+- **Per‑Request AES Keys**: New session key generated for each request  
+- **Replay Protection**: Nonce + timestamp validation  
+- **Temu‑style Security**: Mimics real‑world mobile app encryption flows  
+- **Easy Integration**: React + Node.js example you can adapt to any app
 
 ---
 
@@ -32,7 +32,7 @@ cd hybridshield
 ### **2. Backend Setup**
 
 ```bash
-cd backend
+cd API
 npm install
 npm run dev
 ```
@@ -41,7 +41,7 @@ Backend starts on http://localhost:3000 by default.
 ### **3. Frontend Setup**
 
 ```bash
-cd ../frontend
+cd ../Frontend
 npm install
 npm run dev
 ```
@@ -50,7 +50,7 @@ Frontend starts on http://localhost:8080 (Vite default).
 #### **Important: Set the API URL in your .env file:**
 
 ```bash
-VITE_API_URL=http://localhost:5000
+VITE_API_URL=http://localhost:3000
 ```
 
 #### **Even if an attacker captures your traffic:**
