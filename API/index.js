@@ -6,7 +6,7 @@ const forge = require("node-forge");
 const { v4: uuidv4 } = require("uuid");
 
 const app = express();
-app.use(cors({ origin: "http://localhost:8080" }));
+app.use(cors({ origin: "https://hybridshield.onrender.com" }));
 app.use(bodyParser.text({ type: "application/json" }));
 
 // RSA keys
