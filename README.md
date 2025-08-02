@@ -72,6 +72,17 @@ VITE_API_URL=http://localhost:3000
 
 **If the backend doesn’t get exactly what it expects, the request is dead on arrival. 🚫**
 
+## **Lessons From Breaking My Teeth on Temu’s Flow**
+**While poking at Temu’s setup, I tried every trick in the book to find weaknesses, but their flow held up like a fortress.**
+
+**Still, here’s what devs should watch out for:**
+- Nonce Reuse – Reusing nonces can break replay protection → always use cryptographically secure random numbers
+- Weak RSA Keys – Keys <2048 bits are dangerous → stick with 2048 or higher
+- Key Rotation – Rotate keys regularly → Temu even rotates RSA keys via a separate route, like changing your locks
+- Per‑Request AES Keys – Temu generates a fresh AES key per request (brilliant!)
+- Tight Timestamp Validation – Too loose, and you risk limited replay attacks
+
+
 ## **🙏 Credits**
 TEMU’s engineering team for their rock‑solid hybrid encryption
 
